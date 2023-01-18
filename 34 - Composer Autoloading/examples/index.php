@@ -18,7 +18,7 @@ $blog->addArticle(new Article('A Galaxy Extremely Far Far Away', "A long time ag
     <?php foreach ($blog->articles as $article) : ?>
         <article>
             <h2><?= $article->title ?></h2>
-            <p></p>
+            <p><?= $article->content ?></p>
         </article>
     <?php endforeach; ?>
 </main>
