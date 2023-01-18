@@ -6,6 +6,7 @@ namespace App;
 
 use DateTime;
 
+
 class Article
 {
     public function __construct(public string $title, public string $content, public DateTime $date)
