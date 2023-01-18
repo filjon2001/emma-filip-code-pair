@@ -4,21 +4,20 @@ declare(strict_types=1);
 
 namespace App;
 
+use DateTime;
+
 class Article
 {
-    public function __construct(public string $title, public string $content)
+    public function __construct(public string $title, public string $content, public DateTime $date)
     {
     }
 
-    public function getExcerpt(int $numberOfWords){
+    public function getExcerpt(int $numberOfWords)
+    {
 
         $words = explode(" ", $this->content);
 
         $words = array_slice($words, 0, $numberOfWords);
-        return implode (" ", $words) . " ...";
-
-
-        
-
+        return implode(" ", $words) . " ...";
     }
 }
