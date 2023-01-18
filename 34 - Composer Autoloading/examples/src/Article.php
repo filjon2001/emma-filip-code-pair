@@ -21,4 +21,6 @@ class Article
         $words = array_slice($words, 0, $numberOfWords);
         return implode(" ", $words) . " ...";
     }
+
+    
 }

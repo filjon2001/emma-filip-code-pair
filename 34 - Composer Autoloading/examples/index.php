@@ -17,10 +17,13 @@ $blog->addArticle(new Article('A Galaxy Extremely Far Far Away', "A long time ag
 <h1><?= $blog->name ?></h1>
 <main>
     <?php foreach ($blog->articles as $article) : ?>
-        <article>
-            <h2><?= $article->title ?></h2>
-            <p><?= $article->getExcerpt(15) ?></p>
-            <p><time datetime><?= $article->date->format('Y-m-d') ?></time></p>
-        </article>
+    <article>
+        <h2><?= $article->title ?></h2>
+
+        <p><?= $article->getExcerpt(15) ?></p>
+        <p><?="Written by " . $article->author->author. " on "?><time
+                datetime><?= $article->date->format('F jS Y') ?></time>
+        </p>
+    </article>
     <?php endforeach; ?>
 </main>
